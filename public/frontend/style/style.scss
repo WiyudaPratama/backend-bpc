@@ -1,0 +1,322 @@
+body {
+  background-color: #fff;
+  font-family: Poppins;
+}
+
+// Navbar
+.navbar {
+  background-color: #0F1837;
+
+  .navbar-brand {
+    img {
+      max-height: 100px;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: #9094A2;
+
+        &.active {
+          color: #83D987;
+          font-weight: bold;
+          &:hover {
+            color: #A5E4A8;
+          }
+        }
+
+        &:hover {
+          color: #D6D7D9;
+        }
+      }
+    }
+  }
+
+  .btn-login {
+    background-color: #83D987;
+
+    &:hover {
+      background-color: #ADF1B0;
+    }
+  }
+
+  .btn-registrasi {
+    background-color: #5943A6;
+    color: #fff;
+
+    &:hover {
+      background-color: #7E66D2;
+      color: #fff;
+    }
+  }
+}
+
+// Header
+.jumbotron {
+  background-color: #0F1837;
+  color: #fff;
+  border-radius: 0;
+  padding-top: 40px;
+  min-height: 400px;
+
+  .left-content {
+    h1 {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 65px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 32px;
+      color: #9094A2;
+    }
+
+    .btn-get-started {
+      background-color: #83D987;
+
+      &:hover {
+        background-color: #ADF1B0;
+      }
+    }
+
+  }
+
+  .right-content {
+    img {
+      width: 510px;
+      height: 320px;
+    }
+  }
+}
+
+// Kenapa BPC
+.section-bpc {
+  .left-content {
+    h1 {
+      font-size: 48px;
+      color: #0F1837;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 100;
+      color: #9094A2;
+    }
+  }
+
+  .right-content {
+    p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+  }
+}
+
+// Kelas
+.section-kelas {
+  h1 {
+    font-size: 48px;
+    color: #0F1837;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: #0F1837;
+    font-weight: bold;
+
+    span {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .checkout {
+    .btn-checkout {
+      background-color: #7df3f7;
+      
+      &:hover {
+        background-color: #a9fafd;
+      }
+    }
+  }
+
+}
+
+// Kata Mereka
+.section-kata-mereka {
+  h1 {
+    font-size: 48px;
+    color: #0f1837;
+    font-weight: 600;
+  }
+
+  .profil {
+    img {
+      max-height: 60px;
+    }
+  }
+
+  .load-more {
+    .btn-load-more {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fff;
+      border: 1px solid #9094A2;
+      color: #9094A2;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+}
+
+// Footer
+footer {
+  background-color: #0F1837;
+  color: #fff;
+
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 16px;
+    color: #9094A2;
+  }
+
+  .btn-item {
+    color: #9094A2;
+    padding: 0;
+
+    &:hover {
+      color: #7C7E86;
+    }
+  }
+}
+
+// Halaman Checkout
+// Header
+.jumbotron-checkout {
+  background-color: #0F1837;
+  min-height: 300px;
+  color: #fff;
+  border-radius: 0;
+
+  h1 {
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 55px;
+  }
+}
+
+// Checkout
+.section-checkout-kelas {
+  margin-top: -160px;
+  font-family: 'Montserrat', sans-serif;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    color: #9094A2;
+  }
+
+  .btn-checkout {
+    background-color: #5943A6;
+    color: #fff;
+
+    &:hover {
+      background-color: #7E66D2;
+      color: #fff;
+    }
+  }
+}
+
+// Halaman Success
+.section-success {
+  margin-top: 70px;
+
+  img {
+    max-width: 200px;
+  }
+
+  h1 {
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #0F1837;
+  }
+
+  p {
+    color: #0F1837;
+  }
+
+  .btn-home-page {
+    background-color: #0F1837;
+    color: #fff;
+
+    &:hover {
+      background-color: #1f2b5e;
+      color: #fff;
+    }
+  }
+}
+
+
+
+// Media Query
+@media (max-width: 1024px) {
+  .jumbotron {
+    .right-content {
+      img {
+        width: 400px;
+        height: 280px;
+      }
+    }
+  }
+
+  .section-success {
+    margin-top: 50px;
+
+    img {
+      max-width: 150px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .jumbotron {
+    .left-content {
+      text-align: center;
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .section-success {
+    img {
+      max-width: 120px;
+    }
+  }
+}

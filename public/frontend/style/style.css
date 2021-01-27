@@ -1,0 +1,271 @@
+body {
+  background-color: #fff;
+  font-family: Poppins;
+}
+
+.navbar {
+  background-color: #0F1837;
+}
+
+.navbar .navbar-brand img {
+  max-height: 100px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #9094A2;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: #83D987;
+  font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active:hover {
+  color: #A5E4A8;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #D6D7D9;
+}
+
+.navbar .btn-login {
+  background-color: #83D987;
+}
+
+.navbar .btn-login:hover {
+  background-color: #ADF1B0;
+}
+
+.navbar .btn-registrasi {
+  background-color: #5943A6;
+  color: #fff;
+}
+
+.navbar .btn-registrasi:hover {
+  background-color: #7E66D2;
+  color: #fff;
+}
+
+.jumbotron {
+  background-color: #0F1837;
+  color: #fff;
+  border-radius: 0;
+  padding-top: 40px;
+  min-height: 400px;
+}
+
+.jumbotron .left-content h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.jumbotron .left-content p {
+  font-size: 16px;
+  line-height: 32px;
+  color: #9094A2;
+}
+
+.jumbotron .left-content .btn-get-started {
+  background-color: #83D987;
+}
+
+.jumbotron .left-content .btn-get-started:hover {
+  background-color: #ADF1B0;
+}
+
+.jumbotron .right-content img {
+  width: 510px;
+  height: 320px;
+}
+
+.section-bpc .left-content h1 {
+  font-size: 48px;
+  color: #0F1837;
+  font-weight: 600;
+}
+
+.section-bpc .left-content p {
+  font-size: 16px;
+  font-weight: 100;
+  color: #9094A2;
+}
+
+.section-bpc .right-content p {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.section-kelas h1 {
+  font-size: 48px;
+  color: #0F1837;
+  font-weight: 600;
+}
+
+.section-kelas h2 {
+  font-size: 36px;
+  color: #0F1837;
+  font-weight: bold;
+}
+
+.section-kelas h2 span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.section-kelas h4 {
+  font-size: 20px;
+}
+
+.section-kelas .checkout .btn-checkout {
+  background-color: #7df3f7;
+}
+
+.section-kelas .checkout .btn-checkout:hover {
+  background-color: #a9fafd;
+}
+
+.section-kata-mereka h1 {
+  font-size: 48px;
+  color: #0f1837;
+  font-weight: 600;
+}
+
+.section-kata-mereka .profil img {
+  max-height: 60px;
+}
+
+.section-kata-mereka .load-more .btn-load-more {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  border: 1px solid #9094A2;
+  color: #9094A2;
+}
+
+.section-kata-mereka .load-more .btn-load-more:hover {
+  color: #000;
+}
+
+footer {
+  background-color: #0F1837;
+  color: #fff;
+}
+
+footer h1 {
+  font-size: 28px;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+footer p {
+  font-size: 16px;
+  color: #9094A2;
+}
+
+footer .btn-item {
+  color: #9094A2;
+  padding: 0;
+}
+
+footer .btn-item:hover {
+  color: #7C7E86;
+}
+
+.jumbotron-checkout {
+  background-color: #0F1837;
+  min-height: 300px;
+  color: #fff;
+  border-radius: 0;
+}
+
+.jumbotron-checkout h1 {
+  font-size: 43px;
+  font-weight: 600;
+  line-height: 55px;
+}
+
+.section-checkout-kelas {
+  margin-top: -160px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section-checkout-kelas h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.section-checkout-kelas h3 {
+  font-size: 20px;
+}
+
+.section-checkout-kelas p {
+  font-size: 15px;
+  color: #9094A2;
+}
+
+.section-checkout-kelas .btn-checkout {
+  background-color: #5943A6;
+  color: #fff;
+}
+
+.section-checkout-kelas .btn-checkout:hover {
+  background-color: #7E66D2;
+  color: #fff;
+}
+
+.section-success {
+  margin-top: 70px;
+}
+
+.section-success img {
+  max-width: 200px;
+}
+
+.section-success h1 {
+  margin-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: #0F1837;
+}
+
+.section-success p {
+  color: #0F1837;
+}
+
+.section-success .btn-home-page {
+  background-color: #0F1837;
+  color: #fff;
+}
+
+.section-success .btn-home-page:hover {
+  background-color: #1f2b5e;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .jumbotron .right-content img {
+    width: 400px;
+    height: 280px;
+  }
+  .section-success {
+    margin-top: 50px;
+  }
+  .section-success img {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 990px) {
+  .jumbotron .left-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-success img {
+    max-width: 120px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
