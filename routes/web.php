@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\SuccessController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,12 @@ use App\Http\Controllers\Admin\DashboardController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::get('/success', [SuccessController::class, 'index'])->name('success');
+
+Route::prefix('/user')
+      ->group(function() {
+        Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+        Route::put('/profile-update/{id}', [ProfileController::class, 'update'])->name('profile-update');
+      });
 
 Route::prefix('/admin')
       ->middleware(['admin'])

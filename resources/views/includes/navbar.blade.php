@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container">
-    <a href="#" class="navbar-brand">
+    <a href="{{ route('home') }}" class="navbar-brand">
       <img src="{{ url('/frontend/images/logo.png') }}" alt="Logo BPC">
     </a>
     <button class="navbar-toggler navbar-toggler-right bg-white" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -34,10 +34,10 @@
               @endif
             </a>
             <div class="dropdown-menu p-0 dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-              {{-- <a class="dropdown-item" href="{{ route('profile')}}">
+              <a class="dropdown-item" href="{{ route('profile') }}">
                 <i class="fas fa-user fa-sm fa-fw mr-2 text-muted"></i>
                 Profile
-              </a> --}}
+              </a>
               <div class="dropdown-divider"></div>
               <form action="{{ route('logout') }}" method="POST">
                 @csrf
