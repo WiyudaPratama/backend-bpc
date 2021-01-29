@@ -36,5 +36,5 @@
       <td>{{ $data->member->alamat }}</td>
     </tr>
   </table>
-  <a href="{{ route('member.index') }}" class="btn btn-warning"><i class="fas fa-times"></i></a>
+  <a href="{{ route('member.index') }}" class="btn btn-warning"><i class="fas fa-sign-out-alt"></i> Kembali</a>
 @endsection

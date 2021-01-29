@@ -28,7 +28,7 @@
     </a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{ route('study.index') }}">
       <i class="fas fa-fw fa-book-reader"></i>
       <span>Kelas</span>
     </a>

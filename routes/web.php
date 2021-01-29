@@ -7,6 +7,7 @@ use App\Http\Controllers\SuccessController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\StudyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,5 @@ Route::prefix('/admin')
       ->group(function(){
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('/member', MemberController::class);
+        Route::resource('/study', StudyController::class);
       });
