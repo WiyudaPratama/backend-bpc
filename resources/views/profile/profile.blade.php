@@ -36,7 +36,7 @@
                 @if (Auth::user()->foto)
                   <img src="{{ Storage::url('profile-photos/'.Auth::user()->foto) }}" alt="" class="rounded-circle ml-2" width="40px">
                 @else
-                  <img src="https://ui-avatars.com/api/?name={{ $data->user->name }}" alt="" class="rounded-circle ml-2" width="40px">
+                  <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt="" class="rounded-circle ml-2" width="40px">
                 @endif
               </a>
               <div class="dropdown-menu p-0 dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -92,6 +92,7 @@
       </div>
     </div>
   </nav>
+
 
   <main>
     <section class="section-profile">

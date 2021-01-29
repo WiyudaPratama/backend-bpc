@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\SuccessController;
-use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,6 @@ Route::prefix('/user')
 Route::prefix('/admin')
       ->middleware(['admin'])
       ->group(function(){
-        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashbaord');
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::resource('/member', MemberController::class);
       });

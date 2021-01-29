@@ -13,7 +13,7 @@ class ProfileController extends Controller
     public function index()
     {
         $jurusan = ['Teknik Informatika', 'Sistem Informasi', 'Management Informatika'];
-        $data = Member::with(['user'])->find(Auth::user()->id);
+        $data = Member::with(['user'])->where('user_id', Auth::user()->id)->first();
         return view('profile.profile', compact('data', 'jurusan'));
     }
 
