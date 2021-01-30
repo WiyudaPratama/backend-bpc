@@ -21,8 +21,8 @@ use App\Http\Controllers\Admin\StudyController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
-Route::get('/success', [SuccessController::class, 'index'])->name('success');
+Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('checkout');
+Route::get('/success-process/{id}', [SuccessController::class, 'successProcess'])->name('success-process');
 
 Route::prefix('/user')
       ->group(function() {

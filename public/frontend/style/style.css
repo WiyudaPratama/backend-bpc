@@ -204,6 +204,14 @@ footer .btn-item:hover {
   color: #9094A2;
 }
 
+.section-checkout-kelas .btn-jadwal {
+  background-color: #83D987;
+}
+
+.section-checkout-kelas .btn-jadwal:hover {
+  background-color: #ADF1B0;
+}
+
 .section-checkout-kelas .btn-checkout {
   background-color: #5943A6;
   color: #fff;

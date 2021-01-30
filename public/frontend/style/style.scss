@@ -240,6 +240,14 @@ footer {
     color: #9094A2;
   }
 
+  .btn-jadwal {
+    background-color: #83D987;
+
+    &:hover {
+      background-color: #ADF1B0;
+    }
+  }
+
   .btn-checkout {
     background-color: #5943A6;
     color: #fff;

@@ -52,150 +52,37 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-12 col-lg-4 pb-3" data-aos="zoom-in">
-          <div class="card">
-            <div class="card-body">
-              <h2>Rp. 75000 / <span>Semester</span></h2>
-              <h4>VB.Net Dasar</h4>
-              <div class="dropdown-divider"></div>
-              <div class="fasilitas">
-                <p>Fasilitas yang didapat</p>
-                <div class="fasilitas-item">
-                  <img src="/frontend/images/checklist32.png" alt="" class="float-left">
-                  <p>Konsultasi Mentor</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Studi kasus</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Modul</p>
+        @foreach ($data as $item)
+          <div class="col-12 col-lg-4 pb-3" data-aos="zoom-in">
+            <div class="card">
+              <div class="card-body">
+                <h2>Rp. {{ $item->harga }} / <span>Semester</span></h2>
+                <h4>{{ $item->kelas }}</h4>
+                <div class="dropdown-divider"></div>
+                <div class="fasilitas">
+                  <p>Fasilitas yang didapat</p>
+                  <div class="fasilitas-item">
+                    <img src="/frontend/images/checklist32.png" alt="" class="float-left">
+                    <p>Konsultasi Mentor</p>
+                    <img src="/frontend/images/checklist32.png" alt=""class="float-left">
+                    <p>Studi kasus</p>
+                    <img src="/frontend/images/checklist32.png" alt=""class="float-left">
+                    <p>Modul</p>
+                  </div>
                 </div>
-              </div>
-              <div class="dropdown-divider"></div>
-              <div class="checkout">
-                <a href="checkout.html" class="btn btn-checkout btn-block text-center">Checkout</a>
+                <div class="dropdown-divider"></div>
+                <div class="checkout">
+                  @auth
+                    <a href="{{ route('checkout',$item->slug) }}" class="btn btn-checkout btn-block text-center">Checkout</a>
+                  @endauth
+                  @guest
+                    <a href="{{ route('login') }}" class="btn btn-checkout btn-block text-center">Login or Register</a>
+                  @endguest
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-lg-4 pb-3" data-aos="zoom-in">
-          <div class="card">
-            <div class="card-body">
-              <h2>Rp. 75000 / <span>Semester</span></h2>
-              <h4>HTML, CSS, dan Bootstrap</h4>
-              <div class="dropdown-divider"></div>
-              <div class="fasilitas">
-                <p>Fasilitas yang didapat</p>
-                <div class="fasilitas-item">
-                  <img src="/frontend/images/checklist32.png" alt="" class="float-left">
-                  <p>Konsultasi Mentor</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Studi kasus</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Modul</p>
-                </div>
-              </div>
-              <div class="dropdown-divider"></div>
-              <div class="checkout">
-                <button class="btn btn-checkout btn-block text-center">Checkout</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 pb-3" data-aos="zoom-in">
-          <div class="card">
-            <div class="card-body">
-              <h2>Rp. 75000 / <span>Semester</span></h2>
-              <h4>PHP dan MySQL Dasar</h4>
-              <div class="dropdown-divider"></div>
-              <div class="fasilitas">
-                <p>Fasilitas yang didapat</p>
-                <div class="fasilitas-item">
-                  <img src="/frontend/images/checklist32.png" alt="" class="float-left">
-                  <p>Konsultasi Mentor</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Studi kasus</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Modul</p>
-                </div>
-              </div>
-              <div class="dropdown-divider"></div>
-              <div class="checkout">
-                <button class="btn btn-checkout btn-block text-center">Checkout</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 pb-3" data-aos="zoom-in">
-          <div class="card">
-            <div class="card-body">
-              <h2>Rp. 60000 / <span>Semester</span></h2>
-              <h4>VB.Net Dan Database Dasar</h4>
-              <div class="dropdown-divider"></div>
-              <div class="fasilitas">
-                <p>Fasilitas yang didapat</p>
-                <div class="fasilitas-item">
-                  <img src="/frontend/images/checklist32.png" alt="" class="float-left">
-                  <p>Konsultasi Mentor</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Studi kasus</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Modul</p>
-                </div>
-              </div>
-              <div class="dropdown-divider"></div>
-              <div class="checkout">
-                <button class="btn btn-checkout btn-block text-center">Checkout</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 pb-3" data-aos="zoom-in">
-          <div class="card">
-            <div class="card-body">
-              <h2>Rp. 0 / <span>Semester</span></h2>
-              <h4>Database Lanjutan</h4>
-              <div class="dropdown-divider"></div>
-              <div class="fasilitas">
-                <p>Fasilitas yang didapat</p>
-                <div class="fasilitas-item">
-                  <img src="/frontend/images/checklist32.png" alt="" class="float-left">
-                  <p>Konsultasi Mentor</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Studi kasus</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Modul</p>
-                </div>
-              </div>
-              <div class="dropdown-divider"></div>
-              <div class="checkout">
-                <button class="btn btn-checkout btn-block text-center">Checkout</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 pb-3" data-aos="zoom-in">
-          <div class="card">
-            <div class="card-body">
-              <h2>Rp. 75000 / <span>Semester</span></h2>
-              <h4>Android</h4>
-              <div class="dropdown-divider"></div>
-              <div class="fasilitas">
-                <p>Fasilitas yang didapat</p>
-                <div class="fasilitas-item">
-                  <img src="/frontend/images/checklist32.png" alt="" class="float-left">
-                  <p>Konsultasi Mentor</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Studi kasus</p>
-                  <img src="/frontend/images/checklist32.png" alt=""class="float-left">
-                  <p>Modul</p>
-                </div>
-              </div>
-              <div class="dropdown-divider"></div>
-              <div class="checkout">
-                <button class="btn btn-checkout btn-block text-center">Checkout</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section>

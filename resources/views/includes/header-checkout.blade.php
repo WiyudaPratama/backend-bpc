@@ -4,7 +4,7 @@
       <div class="col-12">
         <h1>Checkout Kelas
           <br>
-          HTML, CSS dan Bootstrap
+          {{ $data->kelas }}
         </h1>
       </div>
     </div>
