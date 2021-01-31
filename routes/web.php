@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\StudyController;
+use App\Http\Controllers\Admin\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,5 @@ Route::prefix('/admin')
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('/member', MemberController::class);
         Route::resource('/study', StudyController::class);
+        Route::resource('/transaction', TransactionController::class);
       });
