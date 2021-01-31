@@ -20,7 +20,6 @@
                     <th>Kelas</th>
                     <th>Jadwal</th>
                     <th>Jam</th>
-                    <th>Aksi</th>
                   </tr>
                   <tr>
                     <th>1</th>
@@ -29,7 +28,7 @@
                     <td>Pagi</td>
                     <td>08.00 - 10.30</td>
                     <td>
-                      <a href="#"><img src="{{ url('/frontend/images/close-128.png') }}" alt="" class="w-25"></a>
+                      <a href="#" class=""><img src="{{ url('/frontend/images/close-128.png') }}" alt="" class="w-25"></a>
                     </td>
                   </tr>
                 </thead>
@@ -59,7 +58,7 @@
                   </select>
                 </div>
                 <div class="col-lg-4 col-12">
-                  <button type="submit" class="btn btn-jadwal d-block ml-auto"><i class="fas fa-plus"></i>Buat Jadwal</button>
+                  <button type="button" class="btn btn-jadwal d-block ml-auto"><i class="fas fa-plus"></i>Buat Jadwal</button>
                 </div>
               </div>
             </form>

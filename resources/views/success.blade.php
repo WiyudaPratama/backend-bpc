@@ -36,7 +36,7 @@
           <br>
           Goodluck <em>"Saturday Is Programming Day"</em>
         </p>
-        <a href="index.html" class="btn btn-home-page px-5 mt-3">Home Page</a>
+        <a href="{{ route('home') }}" class="btn btn-home-page px-5 mt-3">Home Page</a>
       </div>
     </section>
   </main>

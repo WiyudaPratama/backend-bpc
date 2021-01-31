@@ -11,4 +11,9 @@ class Study extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = ['kelas', 'slug', 'harga'];
+
+    public function transaction()
+    {
+        return $this->hasMany(Transaction::class, 'id');
+    }
 }

@@ -22,7 +22,9 @@ use App\Http\Controllers\Admin\StudyController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('checkout');
+// Route::post('/create-jadwal/{id}', [SuccessController::class, 'createJadwal'])->name('create-jadwal');
 Route::get('/success-process/{id}', [SuccessController::class, 'successProcess'])->name('success-process');
+Route::get('success-checkout', [SuccessController::class, 'index'])->name('success-checkout');
 
 Route::prefix('/user')
       ->group(function() {
