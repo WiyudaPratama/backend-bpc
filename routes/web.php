@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\SuccessController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegistrasiAdminController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\StudyController;
@@ -25,7 +26,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('checkout');
 // Route::post('/create-jadwal/{id}', [SuccessController::class, 'createJadwal'])->name('create-jadwal');
 Route::get('/success-process/{id}', [SuccessController::class, 'successProcess'])->name('success-process');
-Route::get('success-checkout', [SuccessController::class, 'index'])->name('success-checkout');
+Route::get('/success-checkout', [SuccessController::class, 'index'])->name('success-checkout');
+Route::get('/register-pengurus', [RegistrasiAdminController::class, 'index'])->name('register-pengurus');
+Route::post('/register-admin-process', [RegistrasiAdminController::class, 'process'])->name('register-admin-process');
 
 Route::prefix('/user')
       ->group(function() {
