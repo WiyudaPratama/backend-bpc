@@ -14,7 +14,7 @@ class AddStatusToAdminsTable extends Migration
     public function up()
     {
         Schema::table('admins', function (Blueprint $table) {
-            $table->enum('status', ['NOT-ACTIVE', 'ACTIVE']);
+            $table->enum('status', ['ACTIVE', 'NOT ACTIVE']);
         });
     }
 

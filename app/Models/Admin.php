@@ -10,7 +10,7 @@ class Admin extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['user_id', 'member_id', 'visi', 'misi'];
+    protected $fillable = ['user_id', 'member_id', 'visi', 'misi', 'status'];
 
     public function user()
     {

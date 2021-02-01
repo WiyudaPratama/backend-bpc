@@ -28,7 +28,7 @@ class RegistrasiAdminController extends Controller
             'member_id' => $data->member->id,
             'visi' => $request->visi,
             'misi' => $request->misi,
-            'status' => 'NOT-ACTIVE',
+            'status' => 'NOT ACTIVE',
         ]);
 
         return redirect()->route('home');

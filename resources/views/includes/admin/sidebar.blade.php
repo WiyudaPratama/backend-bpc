@@ -16,7 +16,7 @@
     </a>
   </li>
   <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{ route('admin.index') }}">
       <i class="fas fa-fw fa-user-shield"></i>
       <span>Pengurus</span>
     </a>
