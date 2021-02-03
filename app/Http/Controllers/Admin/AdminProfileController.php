@@ -30,8 +30,6 @@ class AdminProfileController extends Controller
             'no_telp' => 'numeric',
             'alamat' => 'string|max:255',
         ]);
-
-        dd($request->foto_lama);
         
         if($request->file('foto')) {
             $fileName = $request->foto->getClientOriginalName();
