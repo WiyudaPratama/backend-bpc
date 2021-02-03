@@ -73,7 +73,7 @@
                 <div class="dropdown-divider"></div>
                 <div class="checkout">
                   @auth
-                    <a href="{{ route('checkout',$item->slug) }}" class="btn btn-checkout btn-block text-center">Checkout</a>
+                    <a href="{{ route('checkout-process',$item->slug) }}" class="btn btn-checkout btn-block text-center">Checkout</a>
                   @endauth
                   @guest
                     <a href="{{ route('login') }}" class="btn btn-checkout btn-block text-center">Login or Register</a>

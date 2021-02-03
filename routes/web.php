@@ -26,7 +26,8 @@ use App\Http\Controllers\Admin\AdminProfileController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/checkout/{slug}', [CheckoutController::class, 'index'])->name('checkout');
-// Route::post('/create-jadwal/{id}', [SuccessController::class, 'createJadwal'])->name('create-jadwal');
+Route::put('/checkout-jadwal/{id}', [CheckoutController::class, 'updateJadwal'])->name('checkout-jadwal');
+Route::get('/checkout-process/{slug}', [CheckoutController::class, 'process'])->name('checkout-process');
 Route::get('/success-process/{id}', [SuccessController::class, 'successProcess'])->name('success-process');
 Route::get('/success-checkout', [SuccessController::class, 'index'])->name('success-checkout');
 Route::get('/register-pengurus', [RegistrasiAdminController::class, 'index'])->name('register-pengurus');

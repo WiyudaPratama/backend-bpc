@@ -12,7 +12,7 @@
             <h2>{{ $data->kelas }}</h2>
             <hr>
             <h3>Detail Kelas :</h3>
-              <table class="table">
+              <table class="table table-responsive-sm text-center">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -25,17 +25,16 @@
                     <th>1</th>
                     <td>{{ Auth::user()->name }}</td>
                     <td>{{ $data->kelas }}</td>
-                    <td>Pagi</td>
-                    <td>08.00 - 10.30</td>
-                    <td>
-                      <a href="#" class=""><img src="{{ url('/frontend/images/close-128.png') }}" alt="" class="w-25"></a>
-                    </td>
+                    <td>{{ $transaction->jadwal }}</td>
+                    <td>{{ $transaction->jam }}</td>
                   </tr>
                 </thead>
               </table>
             <hr>
             <h3>Buat Jadwal Kamu</h3>
-            <form action="" method="POST">
+            <form action="{{ route('checkout-jadwal', $transaction->id) }}" method="POST">
+              @csrf
+              @method('put')
               <div class="row">
                 <div class="col-lg-4 col-12">
                   <div class="form-group">
@@ -58,7 +57,7 @@
                   </select>
                 </div>
                 <div class="col-lg-4 col-12">
-                  <button type="button" class="btn btn-jadwal d-block ml-auto"><i class="fas fa-plus"></i>Buat Jadwal</button>
+                  <button type="submit" class="btn btn-jadwal d-block ml-auto"><i class="fas fa-plus"></i>Buat Jadwal</button>
                 </div>
               </div>
             </form>
@@ -89,7 +88,7 @@
             </table>
             <div class="join">
               @if (Auth::user()->member->npm)
-                <a href="{{ route('success-process', $data->id) }}" class="btn btn-checkout text-center btn-block py-3">Checkout</a>
+                <a href="{{ route('success-process', $transaction->id) }}" class="btn btn-checkout text-center btn-block py-3">Checkout</a>
               @else
                 <a href="{{ route('profile') }}" class="btn btn-checkout text-center btn-block py-3">Please Complete Your Personal Information To Checkout This Class</a>
               @endif
