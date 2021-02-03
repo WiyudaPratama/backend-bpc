@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Update Profile Member BPC(Budidarma Programming Club)</title>
 
-  <link href="{{ url('/frontend/library/sb_admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url('/frontend/library/sbadmin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ url('/frontend/library/bootstrap/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url('/frontend/library/aos/aos.css') }}">
 
@@ -33,8 +33,8 @@
             <li class="nav-item dropdown no-arrow">
               <a class="btn text-muted nav-link " type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ Auth::user()->name }}
-                @if (Auth::user()->foto)
-                  <img src="{{ Storage::url('profile-photos/'.Auth::user()->foto) }}" alt="" class="rounded-circle ml-2" width="40px">
+                @if (Auth::user()->member->profil)
+                  <img src="{{ url('storage/profile/'.Auth::user()->member->profil) }}" alt="" class="rounded-circle ml-2" width="60px">
                 @else
                   <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt="" class="rounded-circle ml-2" width="40px">
                 @endif
@@ -110,8 +110,8 @@
                     <form action="{{ route('profile-update', $data->id) }}" method="POST" enctype="multipart/form-data">
                       @csrf
                       @method('PUT')
-                      @if ($data->user->profil)
-                        <img src="{{ Storage::url('profile-photos/'.$data->user->foto) }}" alt="" height="100px" width="100px" class="rounded-circle" id="profile_preview">
+                      @if ($data->profil)
+                        <img src="{{ url('/storage/profile/'.$data->profil) }}" alt="" height="100px" width="100px" class="rounded-circle" id="profile_preview">
                       @else
                         <img src="https://ui-avatars.com/api/?name={{ $data->user->name }}" alt="" height="100px" width="100px" class="rounded-circle" id="profile_preview">
                       @endif

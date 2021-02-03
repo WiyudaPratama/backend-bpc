@@ -1,20 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Member;
 use App\Models\User;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;  
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class AdminProfileController extends Controller
 {
     public function index()
     {
         $jurusan = ['Teknik Informatika', 'Sistem Informasi', 'Management Informatika'];
         $data = Member::with(['user'])->where('user_id', Auth::user()->id)->first();
-        return view('profile.profile', compact('data', 'jurusan'));
+        return view('profile.admin.profile', compact('data', 'jurusan'));
     }
 
     public function update(Request $request, $id)
@@ -29,6 +30,8 @@ class ProfileController extends Controller
             'no_telp' => 'numeric',
             'alamat' => 'string|max:255',
         ]);
+
+        dd($request->foto_lama);
         
         if($request->file('foto')) {
             $fileName = $request->foto->getClientOriginalName();
@@ -55,6 +58,6 @@ class ProfileController extends Controller
             'email' => $request->email
         ]);
         
-        return redirect()->route('profile');
+        return redirect()->route('admin-profile');
     }
 }

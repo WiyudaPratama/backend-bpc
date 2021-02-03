@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\StudyController;
 use App\Http\Controllers\Admin\TransactionController;
+use App\Http\Controllers\Admin\AdminProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,6 @@ Route::prefix('/admin')
         Route::resource('/member', MemberController::class);
         Route::resource('/study', StudyController::class);
         Route::resource('/transaction', TransactionController::class);
+        Route::get('/profile', [AdminProfileController::class, 'index'])->name('admin-profile');
+        Route::put('/profile-update/{id}', [AdminProfileController::class, 'update'])->name('admin-profile-update');
       });

@@ -3,7 +3,7 @@
 
 @section('content')
 <h1 class="h3 text-gray-800">Daftar Member</h1>
-<table class="table table-borderd">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>#</th>
@@ -24,7 +24,7 @@
         <th>{{ $i++ }}</th>
         <td>
           @if ($item->member->profil)
-            <img src="#" alt="Profil">
+            <img src="{{ url('/storage/profile/', $item->member->profil) }}" alt="Profil" width="70px">
           @else
             <img src="https://ui-avatars.com/api/?name={{ $item->name }}" alt="" class="rounded-circle">
           @endif

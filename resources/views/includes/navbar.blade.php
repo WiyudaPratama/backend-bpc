@@ -27,8 +27,8 @@
           <div class="nav-item dropdown no-arrow">
             <a class="btn text-muted nav-link " type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ Auth::user()->name }}
-              @if (Auth::user()->foto)
-                <img src="{{ Storage::url('profile-photos/'.Auth::user()->foto) }}" alt="" class="rounded-circle ml-2" width="40px">
+              @if (Auth::user()->member->profil)
+                <img src="{{ url('/storage/profile/'.Auth::user()->member->profil) }}" alt="" class="rounded-circle ml-2" width="60px">
               @else
                 <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt="" class="rounded-circle ml-2" width="40px">
               @endif
