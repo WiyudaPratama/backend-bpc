@@ -30,15 +30,15 @@ class ProfileController extends Controller
             'alamat' => 'string|max:255',
         ]);
         
-        if($request->file('foto')) {
+        if(!$request->file('foto')) {
+            $imgName = $request->foto_lama;
+        } else {
             $fileName = $request->foto->getClientOriginalName();
             $fileName = explode('.', $fileName);
             $fileName = strtolower($fileName[0]);
 
             $imgName = $fileName . '-' . date('Y-m-d') . '.' . $request->foto->extension();
             $request->foto->move(public_path('storage/profile'), $imgName);
-        } else {
-            $imgName = null;
         }
 
         Member::find($id)->update([

@@ -34,9 +34,9 @@
               <a class="btn text-muted nav-link " type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ Auth::user()->name }}
                 @if (Auth::user()->member->profil)
-                  <img src="{{ url('storage/profile/'.Auth::user()->member->profil) }}" alt="" class="rounded-circle ml-2" width="60px">
+                  <img src="{{ url('storage/profile/'.Auth::user()->member->profil) }}" alt="" class="rounded-circle ml-2 img-profile" width="50px" height="50px">
                 @else
-                  <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt="" class="rounded-circle ml-2" width="40px">
+                  <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" alt="" class="rounded-circle ml-2 img-profile" width="50px" height="50px">
                 @endif
               </a>
               <div class="dropdown-menu p-0 dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -119,6 +119,7 @@
                           <label for="foto">Pilih Foto Kamu</label>
                           <input type="file" name="foto" class="form-control" id="foto" onchange="preview_image(event)">
                       </div>
+                      <input type="hidden" name="foto_lama" value="{{ $data->profil }}">
                       <input type="hidden" name="id_user" value="{{ $data->user->id }}">
                       <div class="form-group">
                         <label for="nama">Nama</label>

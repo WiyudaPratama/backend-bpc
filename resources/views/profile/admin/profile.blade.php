@@ -26,6 +26,7 @@
                         <label for="foto">Pilih Foto Kamu</label>
                         <input type="file" name="foto" class="form-control" id="foto" onchange="preview_image(event)">
                     </div>
+                    <input type="hidden" name="foto_lama" value="{{ $data->profil }}">
                     <input type="hidden" name="id_user" value="{{ $data->user->id }}">
                     <div class="form-group">
                       <label for="nama">Nama</label>
