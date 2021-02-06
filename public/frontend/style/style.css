@@ -252,6 +252,10 @@ footer .btn-item:hover {
   color: #fff;
 }
 
+.section-gallery {
+  height: 100vh;
+}
+
 @media (max-width: 1024px) {
   .jumbotron .right-content img {
     width: 400px;

@@ -3,7 +3,7 @@
 
 @section('content')
 <h1 class="h3 text-gray-800">Daftar Member</h1>
-<table class="table table-bordered">
+<table class="table table-bordered table-responsive-sm">
   <thead>
     <tr>
       <th>#</th>

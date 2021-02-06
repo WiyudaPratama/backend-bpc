@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto mr-3">
         <li class="nav-item mx-md-2">
-          <a href="#" class="nav-link active">Home</a>
+          <a href="{{ route('home') }}" class="nav-link active">Home</a>
         </li>
         <li class="nav-item mx-md-2">
           <a href="#" class="nav-link">Activities</a>
         </li>
         <li class="nav-item mx-md-2">
-          <a href="#" class="nav-link">Stories</a>
+          <a href="{{ route('gallery') }}" class="nav-link">Gallery</a>
         </li>
         <li class="nav-item mx-md-2">
           <a href="#" class="nav-link">About</a>

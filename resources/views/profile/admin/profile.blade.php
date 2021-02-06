@@ -23,8 +23,11 @@
                       <img src="https://ui-avatars.com/api/?name={{ $data->user->name }}" alt="" height="100px" width="100px" class="rounded-circle" id="profile_preview">
                     @endif
                     <div class="form-group">
-                        <label for="foto">Pilih Foto Kamu</label>
-                        <input type="file" name="foto" class="form-control" id="foto" onchange="preview_image(event)">
+                      <label for="foto">Pilih Foto Kamu</label>
+                      <input type="file" name="foto" class="form-control-file @error('foto') is-invalid @enderror" id="foto" onchange="preview_image(event)">
+                      @error('foto')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                      @enderror
                     </div>
                     <input type="hidden" name="foto_lama" value="{{ $data->profil }}">
                     <input type="hidden" name="id_user" value="{{ $data->user->id }}">

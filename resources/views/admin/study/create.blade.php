@@ -11,11 +11,17 @@
             @csrf
             <div class="form-group">
               <label for="kelas">Nama Kelas</label>
-              <input type="text" name="kelas" id="kelas" class="form-control">
+              <input type="text" name="kelas" id="kelas" class="form-control @error('kelas') is-invalid @enderror" value="{{ old('kelas') }}">
+              @error('kelas')
+                <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
             <div class="form-group">
               <label for="harga">Harga Kelas</label>
-              <input type="number" name="harga" id="harga" class="form-control">
+              <input type="number" name="harga" id="harga" class="form-control @error('harga') is-invalid @enderror" value="{{ old('harga') }}">
+              @error('harga')
+                <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
             <a href="{{ route('study.index') }}" class="btn btn-warning"><i class="fas fa-sign-out-alt"></i> Kembali</a>
             <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah</button>

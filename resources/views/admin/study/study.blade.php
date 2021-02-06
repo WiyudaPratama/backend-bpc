@@ -4,7 +4,7 @@
 @section('content')
   <h1 class="h3 text-gray-800">Kelas BPC</h1>
   <a href="{{ route('study.create') }}" class="btn btn-primary mb-3"><i class="fas fa-plus"> Tambah Kelas</i></a>
-  <table class="table table-bordered">
+  <table class="table table-bordered table-responsive-sm">
     <thead>
       <tr>
         <th>#</th>

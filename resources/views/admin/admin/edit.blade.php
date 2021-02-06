@@ -23,7 +23,7 @@
                 @endforeach
               </select>
               <a href="{{ route('admin.index') }}" class="btn btn-warning mt-3"><i class="fas fa-sign-out-alt"></i> Kembali</a>
-              <button type="submit" class="btn btn-primary mt-3"><i class="fas fa-plus"></i> Ubah Status</button>
+              <button type="submit" class="btn btn-primary mt-3"><i class="fas fa-edit"></i> Ubah Status</button>
             </div>
           </form>
         </div>

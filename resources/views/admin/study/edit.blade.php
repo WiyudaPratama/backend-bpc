@@ -12,11 +12,17 @@
             @method('put')
             <div class="form-group">
               <label for="kelas">Nama Kelas</label>
-              <input type="text" name="kelas" id="kelas" class="form-control" value="{{ $data->kelas }}">
+              <input type="text" name="kelas" id="kelas" class="form-control @error('kelas') is-invalid @enderror" value="{{ $data->kelas }}">
+              @error('kelas')
+                <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
             <div class="form-group">
               <label for="harga">Harga Kelas</label>
-              <input type="number" name="harga" id="harga" class="form-control" value="{{ $data->harga }}">
+              <input type="number" name="harga" id="harga" class="form-control @error('harga') is-invalid @enderror" value="{{ $data->harga }}">
+              @error('harga')
+                <div class="alert alert-danger">{{ $message }}</div>
+              @enderror
             </div>
             <a href="{{ route('study.index') }}" class="btn btn-warning"><i class="fas fa-sign-out-alt"></i> Kembali</a>
             <button type="submit" class="btn btn-primary"><i class="fas fa-edit"></i> Ubah</button>

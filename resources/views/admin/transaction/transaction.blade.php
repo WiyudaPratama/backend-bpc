@@ -3,7 +3,7 @@
 
 @section('content')
   <h1 class="h3 text-gray-800">Transaksi Kelas</h1>
-  <table class="table bordered">
+  <table class="table table-bordered table-responsive-sm">
     <thead>
       <tr>
         <th>#</th>

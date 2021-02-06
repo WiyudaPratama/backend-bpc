@@ -39,6 +39,12 @@
       <span>Transaksi</span>
     </a>
   </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="{{ route('gallery.index') }}">
+      <i class="fas fa-fw fa-image"></i>
+      <span>Gallery</span>
+    </a>
+  </li>
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
 
