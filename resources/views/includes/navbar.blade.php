@@ -11,15 +11,15 @@
         <li class="nav-item mx-md-2">
           <a href="{{ route('home') }}" class="nav-link active">Home</a>
         </li>
-        <li class="nav-item mx-md-2">
+        {{-- <li class="nav-item mx-md-2">
           <a href="#" class="nav-link">Activities</a>
-        </li>
+        </li> --}}
         <li class="nav-item mx-md-2">
           <a href="{{ route('gallery') }}" class="nav-link">Gallery</a>
         </li>
-        <li class="nav-item mx-md-2">
+        {{-- <li class="nav-item mx-md-2">
           <a href="#" class="nav-link">About</a>
-        </li>
+        </li> --}}
       </ul>
       <!-- Mobile Button -->
       @if (Route::has('login'))
