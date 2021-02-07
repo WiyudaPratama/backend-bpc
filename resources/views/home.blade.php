@@ -96,45 +96,41 @@
         </div>
       </div>
       <div class="row justify-content-center pb-5">
-        <div class="col-12 col-lg-4 mt-3" data-aos="fade-up">
-          <div class="card">
-            <div class="card-body">
-              <p>Terimakasih BPC, Mentor nya keren-keren dan materi yang diajarkan keren banger.</p>
-              <hr>
-              <div class="profil d-flex align-items-center">
-                <img src="/frontend/images/avatar-2.png" alt="" class="float-left rounded-circle shadow mr-3">
-                <p>Sayana</p>
+        @foreach ($comments as $comment)
+          <div class="col-12 col-lg-4 mt-3" data-aos="fade-up">
+            <div class="card">
+              <div class="card-body">
+                <p>{{ $comment->comment }}</p>
+                <hr>
+                <div class="profil d-flex align-items-center">
+                  <img src="{{ url('/storage/profile/', $comment->user->member->profil) }}" alt="" class="float-left rounded-circle mr-3">
+                  <p>{{ $comment->user->name }}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-lg-4 mt-3" data-aos="fade-up">
-          <div class="card">
-            <div class="card-body">
-              <p>Terimakasih BPC, Mentor nya keren-keren dan materi yang diajarkan keren banger.</p>
-              <hr>
-              <div class="profil d-flex align-items-center">
-                <img src="/frontend/images/avatar-3.png" alt="" class="float-left rounded-circle shadow mr-3">
-                <p>Sabrina</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 mt-3" data-aos="fade-up">
-          <div class="card">
-            <div class="card-body">
-              <p>Terimakasih BPC, Mentor nya keren-keren dan materi yang diajarkan keren banger.</p>
-              <hr>
-              <div class="profil d-flex align-items-center">
-                <img src="/frontend/images/avatar-2.png" alt="" class="float-left rounded-circle shadow mr-3">
-                <p>Sayana</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
-      <div class="load-more text-center" data-aos="fade-up">
-        <a href="#" class="btn btn-load-more">LIHAT LEBIH BANYAK</a>
+      <div class="row justify-content-center">
+        @auth
+          <div class="col-12 col-md-4">
+            <div class="comment text-center" data-aos="fade-up">
+              <a href="{{ route('comment.create') }}" class="btn btn-comment">BERIKAN TANGGAPANMU</a>
+            </div>
+          </div>
+        @endauth
+        @guest
+          <div class="col-12 col-md-4">
+            <div class="comment text-center" data-aos="fade-up">
+              <a href="{{ route('login') }}" class="btn btn-comment">LOGIN DAN BERIKAN TANGGAPANMU</a>
+            </div>
+          </div>
+        @endguest
+        <div class="col-12 col-md-4">
+          <div class="load-more text-center " data-aos="fade-up">
+            <a href="{{ route('comment.index') }}" class="btn btn-load-more">LIHAT LEBIH BANYAK</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

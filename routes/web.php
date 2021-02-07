@@ -6,6 +6,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\SuccessController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeGalleryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\RegistrasiAdminController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\AdminController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\Admin\StudyController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\AdminCommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +36,8 @@ Route::get('/success-process/{id}', [SuccessController::class, 'successProcess']
 Route::get('/success-checkout', [SuccessController::class, 'index'])->name('success-checkout');
 Route::get('/register-pengurus', [RegistrasiAdminController::class, 'index'])->name('register-pengurus');
 Route::post('/register-admin-process', [RegistrasiAdminController::class, 'process'])->name('register-admin-process');
-Route::get('gallery', [HomeGalleryController::class, 'index'])->name('gallery');
+Route::get('/gallery', [HomeGalleryController::class, 'index'])->name('gallery');
+Route::resource('/comment', CommentController::class);
 
 Route::prefix('/user')
       ->group(function() {
@@ -52,5 +55,6 @@ Route::prefix('/admin')
         Route::resource('/transaction', TransactionController::class);
         Route::get('/profile', [AdminProfileController::class, 'index'])->name('admin-profile');
         Route::put('/profile-update/{id}', [AdminProfileController::class, 'update'])->name('admin-profile-update');
-        Route::resource('gallery', GalleryController::class);
+        Route::resource('/gallery', GalleryController::class);
+        Route::resource('/comment', AdminCommentController::class);
       });

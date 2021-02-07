@@ -45,6 +45,12 @@
       <span>Gallery</span>
     </a>
   </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="{{ route('comment.index') }}">
+      <i class="fas fa-fw fa-comments"></i>
+      <span>Comment</span>
+    </a>
+  </li>
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
 
